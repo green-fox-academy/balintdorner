@@ -1,0 +1,28 @@
+/*380x285*/
+div {
+    box-sizing: border-box;
+    width: 380px;
+    height: 285px;
+    border: #4285F4 solid 15px;
+    margin-bottom: 7px;
+}
+#top {
+    background: #E67676;
+}
+
+#bottom {
+    background: #A9E6E6;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    width: 350px;
+    height: 130px;
+    border: 0px;
+    margin: 0px;
+    font-size: 36px;
+    color: white;
+    padding-top: 40px;
+}

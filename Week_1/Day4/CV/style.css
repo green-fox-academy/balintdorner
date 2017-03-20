@@ -1,0 +1,81 @@
+body {
+    margin: 0px 280px;
+}
+
+div {
+    box-sizing: border-box;
+    height: 320px;
+    margin: 0px;
+    background-image: url(anakin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 200px;
+    padding-left: 200px;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 48px;
+}
+
+span {
+    display: block;
+}
+
+
+main {
+    margin: 0px 150px;
+}
+
+main dl:first-child {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 25px;
+}
+
+p, dd, dt, .bottom {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+blockquote {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    background-color: #444444;
+    padding: 50px;
+}
+
+p, dd {
+        padding-left: 100px;
+        padding-right: 100px;
+        font-family: 'Josefin Sans', sans-serif;
+}
+
+dt {
+    padding-left: 130px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+dd {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.bottom {
+    padding-left: 170px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.smaller {
+font-family: 'Merriweather', serif;
+font-size: 15px;
+font-style: italic;
+}

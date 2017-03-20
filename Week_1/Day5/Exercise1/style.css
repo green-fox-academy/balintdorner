@@ -1,0 +1,23 @@
+h1 {
+    margin-left: 20px;
+}
+
+span {
+    display: block;
+    width: 400px;
+    margin: 0px 0px 0px 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+article span:first-child {
+    border-top: 0px;
+}
+
+article span:last-child {
+    border-bottom: 0px;
+}
+
+span:nth-child(4):hover {
+    background-color: #EC6842;
+}

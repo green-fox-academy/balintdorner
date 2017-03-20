@@ -1,0 +1,9 @@
+body {
+    margin-left: 80px;
+}
+
+p {
+    border-left: black solid 2px;
+    padding-left: 20px;
+    font-size: 18px;
+}

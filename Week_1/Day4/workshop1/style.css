@@ -1,0 +1,12 @@
+/*360x160 a total box meret*/
+p {
+    margin: 15px 10px 15px 10px;
+    border: #7DCE94 solid 5px;
+    width: 130px;
+    height: 55px;
+    background: #0E91A1;
+    padding: 15px 205px 65px 15px;
+    font-size: 33px;
+    color: #005566;
+    font-family: 'Roboto', sans-serif;
+}

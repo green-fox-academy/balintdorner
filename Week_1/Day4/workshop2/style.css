@@ -1,0 +1,36 @@
+/* 385x550 */
+div {
+    box-sizing: border-box;
+    width: 380px;
+    height: 550px;
+    border: #4285F4 solid 15px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    width: 350px;
+    height: 130px;
+    border: 0px;
+    margin: 0px;
+    font-size: 36px;
+    color: white;
+    padding-top: 40px;
+}
+
+#first {
+    background: #E67676;
+}
+
+#second {
+    background: #F2F062;
+}
+
+#third {
+    background: #A9E6E6;
+}
+
+#fourth {
+    background: #7692E4;
+}

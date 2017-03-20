@@ -1,0 +1,38 @@
+div {
+    margin: 50px;
+}
+
+p {
+    margin-top: 0px;
+}
+
+ul {
+    list-style-type: square;
+    color: #0A07FF;
+}
+
+.lorem {
+    font-size: 17px;
+}
+.title {
+    color: #0B00F5;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sub {
+    color: #FBA800;
+    font-size: 24px;
+}
+
+.listone {
+    list-style-type: disc;
+}
+
+.others {
+    color: black;
+}
+
+.apple {
+    color: #BA1F25;
+}
