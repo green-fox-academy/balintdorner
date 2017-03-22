@@ -4,6 +4,6 @@
 # - Print the fourth element
 
 s = [1, 2, 3, 8, 5, 6]
-s[3] = 4
+s[2] += 12
 
-print(s[3])
+print(s[2])
