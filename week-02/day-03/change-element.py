@@ -4,6 +4,6 @@
 # - Print the fourth element
 
 s = [1, 2, 3, 8, 5, 6]
-s[2] += 12
+s[2] = 4
 
 print(s[2])
