@@ -20,3 +20,10 @@ for i in range(n):
             a[i][j] = 1
 for row in a:
     print(' '.join([str(elem) for elem in row]))
+
+
+matrix = [0, 0, 0, 0]
+for x in range(0, 4):
+    x = 0
+    total = matrix*x
+print(total)
