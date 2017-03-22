@@ -8,7 +8,7 @@
 #
 # - Print this two dimensional list to the output
 
-n = 4
+n = 7
 a = [[0] * n for i in range(n)]
 for i in range(n):
     for j in range(n):
