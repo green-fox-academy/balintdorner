@@ -3,5 +3,5 @@
 far = ["kuty", "macsk", "kacs", "rók", "halacsk"]
 a = []
 for i in range(len(far)):
-    a += far[i] + i*"a"
+    a += [far[i] + "a"]
 print(a)
