@@ -15,3 +15,8 @@ hashmap = [
     {11: "\n"}, # 6
     {3: "say goodbye"} # 7
 ]
+
+for num not
+    for map in hashmap
+        if map.has_key(num):
+            print
