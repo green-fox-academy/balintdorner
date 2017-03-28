@@ -3,20 +3,21 @@ myfile = open("duplicated_chars.txt", "r")
 
 def decrypt(file_name):
 
-# Solution one
+# ************* Solution one ***************
 # print(text[::2])
 
-# Solution two
+# ************* Solution two ****************
 #    index = ""
 #    for i in range(845):
 #        index += text[2*i]
 #    print(index)
 #    pass
+
+# ************** Solution three ***************
     text = myfile.read()
     printing = ""
     for char in range(len(text)):
         if char % 2 == 0:
             printing += text[char]
-    print(printing)
-
-decrypt(myfile)
+    return printing
+print(decrypt(myfile))
