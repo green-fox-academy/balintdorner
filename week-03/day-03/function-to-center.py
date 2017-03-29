@@ -14,14 +14,10 @@ def drawing(x, y):
     canvas.create_line(x, y, 150, 150)
     return
 
-drawing(0,0)
+for i in range(0, 301, 20):
+    drawing(0, i)
+    drawing(i, 0)
+    drawing(300, i)
+    drawing(i, 300)
 
-x = 0
-y = 0
-
-for i in range(16):
-    for j in range(16):
-        drawing(20*i, 20*j)
-        x +=20
-        y +=20
 root.mainloop()
