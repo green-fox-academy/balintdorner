@@ -14,4 +14,6 @@ def linedrawer(x_zero, y_zero):
     canvas.create_line(x_zero, y_zero, 150, 150, fill ='green')
     return
 linedrawer(0, 0)
+linedrawer(300, 0)
+linedrawer(0, 300)
 root.mainloop()
