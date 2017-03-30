@@ -4,6 +4,6 @@ def countdown(n):
     if n <= 0:
         return n
     else:
-        return n + countdown(n-1)
+        return countdown(base, n-1)
 
 print(countdown(6))
