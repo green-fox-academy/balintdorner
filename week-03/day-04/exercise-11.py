@@ -24,4 +24,5 @@ squares(0, 200, 200)
 squares(200, 0, 200)
 squares(400, 200, 200)
 squares(200, 400, 200)
+
 root.mainloop()
