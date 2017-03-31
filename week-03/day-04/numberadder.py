@@ -6,4 +6,4 @@ def countdown(n):
     else:
         return countdown(base, n-1)
 
-print(countdown(6))
+print(countdown(2))
