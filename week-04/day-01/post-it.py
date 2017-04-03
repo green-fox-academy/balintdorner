@@ -13,9 +13,6 @@ class PostIt():
     text_color = ''
 
 postit1 = PostIt()
-#postit3 = Postit()
-
-
 postit1.blackgrund_color = 'orange'
 postit1.text = 'Idea 1'
 postit1.text_color = 'blue'
@@ -23,7 +20,6 @@ postit1.text_color = 'blue'
 print(postit1.blackgrund_color + ' ' + postit1.text + ' ' + postit1.text_color)
 
 postit2 = PostIt()
-
 postit2.blackgrund_color = 'pink'
 postit2.text = 'Awesome'
 postit2.text_color = 'black'
@@ -31,7 +27,6 @@ postit2.text_color = 'black'
 print(postit2.blackgrund_color + ' ' + postit2.text + ' ' + postit2.text_color)
 
 postit3 = PostIt()
-
 postit3.blackgrund_color = 'yellow'
 postit3.text = 'SuperB!'
 postit3.text_color = 'green'
