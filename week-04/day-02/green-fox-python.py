@@ -38,6 +38,22 @@ class Mentor(Person):
     def get_goal(self):
         print("Educate brilliant junior software developers.")
 
+class Sponsor(Person):
+    def __init__(self, name = 'Jane Doe', age = 30, gender = 'female', company = 'Google', hired_students = 0):
+        super().__init__(name, age, gender)
+        self.company = company
+        self.hired_students = hired_students
+
+    def introduce(self):
+        print("Hi, I'm " + self.name + " , a " + str(self.age) + " year old " + self.gender + " who represtents " + self.company + " and hired " + str(self.hired_students) + ' students so far.')
+
+    def hire(self):
+        self.hired_students += 1
+        return self.hired_students
+
+    def get_goal(self):
+        print("Hire brilliant junior software developers.")
+
 
 
 
@@ -45,6 +61,7 @@ class Mentor(Person):
 person = Person()
 student = Student()
 mentor = Mentor()
+sponsor = Sponsor()
 #person.gender = 'who knows'
 person.introduce()
 person.get_goal()
@@ -53,3 +70,5 @@ student.get_goal()
 student.skip_days(5)
 mentor.level = 'Intermediate'
 mentor.introduce()
+sponsor.introduce()
+print(sponsor.hire())
