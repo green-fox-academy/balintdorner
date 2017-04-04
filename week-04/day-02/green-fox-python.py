@@ -54,21 +54,70 @@ class Sponsor(Person):
     def get_goal(self):
         print("Hire brilliant junior software developers.")
 
+class LagopusClass(object):
+    def __init__(self, class_name = 'Lagopus'):
+        self.class_name = class_name
+        self.students = []
+        self.mentors = []
 
+    def add_student(self, Student):
+        self.students.append(Student)
 
+    def add_mentor(self, Mentor):
+        self.mentors.append(Mentor)
 
+    def info(self):
+        print(self.class_name + " class has " + str(len(self.students)) + " students and " + str(len(self.mentors)) + " mentors.")
 
-person = Person()
-student = Student()
-mentor = Mentor()
-sponsor = Sponsor()
+#person = Person()
+#student = Student()
+#mentor = Mentor()
+#sponsor = Sponsor()
+#lagopus = LagopusClass('Alma', 'Balta')
 #person.gender = 'who knows'
-person.introduce()
-person.get_goal()
-student.introduce()
-student.get_goal()
-student.skip_days(5)
-mentor.level = 'Intermediate'
-mentor.introduce()
-sponsor.introduce()
-print(sponsor.hire())
+#person.introduce()
+#person.get_goal()
+#student.introduce()
+#student.get_goal()
+#student.skip_days(5)
+#mentor.level = 'Intermediate'
+#mentor.introduce()
+#sponsor.introduce()
+#print(sponsor.hire())
+#lagopus.info()
+
+people = []
+
+mark = Person('Mark', 46, 'male')
+people.append(mark)
+jane = Person()
+people.append(jane)
+john = Student('John Doe', 20, 'male', 'BME')
+people.append(john)
+student = Student()
+people.append(student)
+gandhi = Mentor('Gandhi', 148, 'male', 'senior')
+people.append(gandhi)
+mentor = Mentor()
+people.append(mentor)
+sponsor = Sponsor()
+elon = Sponsor('Elon Musk', 46, 'male', 'SpaceX')
+people.append(elon)
+student.skip_days(3)
+
+for i in range(5):
+    elon.hire()
+
+for i in range(3):
+    sponsor.hire()
+
+for member in people:
+    member.introduce()
+    member.get_goal()
+
+badass = LagopusClass('BADA55')
+badass.add_student(student);
+badass.add_student(john);
+badass.add_mentor(mentor);
+badass.add_mentor(gandhi);
+badass.info();
