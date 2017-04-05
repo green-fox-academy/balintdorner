@@ -36,5 +36,11 @@ class TestAnagram(unittest.TestCase):
         ana = Anagram()
         self.assertEqual(ana.check_anagram('kati' , 'robi'), False)
 
+class TestCountLetters(unittest.TestCase):
+    def test_count_letters(self):
+        counting = CountLetters()
+        word = 'alma'
+        self.assertEqual(counting.count_letters(word), {'m':1, 'l':1, 'a':2})
+
 if __name__ == '__main__':
     unittest.main()
