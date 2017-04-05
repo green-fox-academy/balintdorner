@@ -21,7 +21,7 @@ class TestExtend(unittest.TestCase):
         self.assertEqual(extend.median([7,6,3,4]), 5)
 
     def test_median_five(self):
-        self.assertEqual(extend.median([1,2,2,4,6]), 3)
+        self.assertEqual(extend.median([1,2,3,4,5]), 3)
 
     def test_is_vovel_a(self):
         self.assertTrue(extend.is_vovel('ú'))
