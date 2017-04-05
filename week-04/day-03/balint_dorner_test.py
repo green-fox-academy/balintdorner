@@ -27,6 +27,14 @@ class TestSumList(unittest.TestCase):
         integer = [0]
         self.assertEqual(summa.sum(integer), 0)
 
+class TestAnagram(unittest.TestCase):
+    def test_anagram_true(self):
+        ana = Anagram()
+        self.assertEqual(ana.check_anagram('bela' , 'aleb'), True)
+
+    def test_anagram_false(self):
+        ana = Anagram()
+        self.assertEqual(ana.check_anagram('kati' , 'robi'), False)
 
 if __name__ == '__main__':
     unittest.main()
