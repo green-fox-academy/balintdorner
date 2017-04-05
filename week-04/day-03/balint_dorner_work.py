@@ -30,3 +30,13 @@ class CountLetters():
         for key, value in zip(self.key_list, self.value_list):
             self.dicti[key] = value
         return self.dicti
+
+class Fibonacci():
+    def fibo(self, number):
+        self.number = number
+        if self.number == 0:
+            return 0
+        elif self.number == 1:
+            return 1
+        else:
+            return self.fibo(number-1) + self.fibo(number-2)
