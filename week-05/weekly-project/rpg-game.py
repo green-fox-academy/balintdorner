@@ -21,8 +21,11 @@ class Box(object):
 #        self.check_if_wall_is_coming()
     def draw(self, canvas):
         self.main_character = PhotoImage(file = 'hero-down.png')
-        character = canvas.create_image(self.testBoxX, self.testBoxY, anchor = NE, image = self.main_character)
-        return character
+        self.up = PhotoImage(file = 'up.png')
+        self.right = PhotoImage(file = 'right.png')
+        self.left = PhotoImage(file = 'left.png')
+        self.character = canvas.create_image(self.testBoxX*72, self.testBoxY*72, anchor = NW, image = self.main_character)
+        return self.character
 
     def map(self):
         self.wall = PhotoImage(file = 'wall.png')
@@ -33,6 +36,15 @@ class Box(object):
                     canvas.create_image(element*72, line*72, anchor = NW, image = self.floor)
                 else:
                     canvas.create_image(element*72, line*72, anchor = NW, image = self.wall)
+
+    def move(self, x, y, picture):
+        if 0 <= x <= 9 and 0 <= y <= 10:
+            if self.background[y][x] == 1:
+                canvas.delete(self.character)
+                self.testBoxX = x
+                self.testBoxY = y
+                self.character = canvas.create_image(72*self.testBoxX, 72*self.testBoxY, anchor=NW, image = picture)
+
 
     #def check_if_wall_is_coming(self):
     #    coords = canvas.coords(character)
@@ -53,20 +65,23 @@ class MainLoop():
         # When the keycode is 111 (up arrow) we move the position of our box higher
         if e.keycode == 38:
             if box.testBoxY > 0:
-                box.testBoxY = box.testBoxY - 72
+                box.move(box.testBoxX, box.testBoxY-1, box.up)
+        #        box.testBoxY = box.testBoxY - 72
         elif e.keycode == 40:
-            if box.testBoxY < 720:
-                box.testBoxY = box.testBoxY + 72
+            if box.testBoxY < 792:
+                box.move(box.testBoxX, box.testBoxY+1, box.main_character)
+        #        box.testBoxY = box.testBoxY + 72
         elif e.keycode == 39:
-            if box.testBoxX <= 648:
-                box.testBoxX = box.testBoxX + 72
+            if box.testBoxX <= 720:
+                box.move(box.testBoxX+1, box.testBoxY, box.right)
+        #        box.testBoxX = box.testBoxX + 72
         elif e.keycode == 37:
-            if box.testBoxX > 72:
-                box.testBoxX = box.testBoxX - 72
+            if box.testBoxX > 0:
+                box.move(box.testBoxX-1, box.testBoxY, box.left)
+        #        box.testBoxX = box.testBoxX - 72
 
         # and lower if the key that was pressed the down arrow
         # draw the box again in the new position
-        box.draw(canvas)
 mainloop = MainLoop()
 # Tell the canvas that we prepared a function that can deal with the key press events
 canvas.bind("<KeyPress>", mainloop.on_key_press)
