@@ -2,7 +2,7 @@ from tkinter import *
 
 class Box(object):
     def __init__(self):
-        self.testBoxX = 72
+        self.testBoxX = 0
         self.testBoxY = 0
         self.background = [
         [1, 1, 1, 0, 1, 0, 1, 1, 1, 1],
@@ -12,16 +12,17 @@ class Box(object):
         [0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
         [1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 0, 1, 0, 1],
-        [1, 1, 1, 1, 1, 1, 0, 0, 0, 1],
+        [1, 1, 1, 1, 1, 0, 0, 1, 0, 1],
         [1, 0, 0, 0, 1, 1, 1, 1, 0, 1],
         [1, 1, 1, 0, 1, 0, 0, 1, 0, 1],
         [1, 0, 1, 0, 1, 0, 1, 1, 1, 1],
         ]
         self.map()
-
+#        self.check_if_wall_is_coming()
     def draw(self, canvas):
         self.main_character = PhotoImage(file = 'hero-down.png')
-        canvas.create_image(self.testBoxX, self.testBoxY, anchor = NE, image = self.main_character)
+        character = canvas.create_image(self.testBoxX, self.testBoxY, anchor = NE, image = self.main_character)
+        return character
 
     def map(self):
         self.wall = PhotoImage(file = 'wall.png')
@@ -32,6 +33,11 @@ class Box(object):
                     canvas.create_image(element*72, line*72, anchor = NW, image = self.floor)
                 else:
                     canvas.create_image(element*72, line*72, anchor = NW, image = self.wall)
+
+    #def check_if_wall_is_coming(self):
+    #    coords = canvas.coords(character)
+    #    print(coords)
+
 
 
 # Create the tk environment as usual
