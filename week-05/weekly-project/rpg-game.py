@@ -62,9 +62,9 @@ class Box(object):
         canvas.create_image(self.boss_coords[0]*72, self.boss_coords[1]*72, anchor = NW, image = self.boss)
 
     def label(self):
-        self.w = Label(root, text="Hello Tkinter!")
-        self.w.pack()
-        self.w.place(anchor = E, width = 500, height = 200)
+        self.w = Label(root, text="Hello Tkinter!", bg = 'grey')
+        self.w.pack(side = BOTTOM)
+        self.w.place(x = 720, y = 0, width = 280, height = 792)
 
     #def check_if_wall_is_coming(self):
     #    coords = canvas.coords(character)
@@ -76,7 +76,7 @@ class Box(object):
 root = Tk()
 
 
-canvas = Canvas(root, width=720, height=792)
+canvas = Canvas(root, width=1020, height=792)
 
 # Creating a box that can draw itself in a certain position
 box = Box()
