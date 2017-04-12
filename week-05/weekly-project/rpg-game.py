@@ -1,4 +1,5 @@
 from tkinter import *
+import random
 
 class Box(object):
     def __init__(self):
@@ -18,6 +19,9 @@ class Box(object):
         [1, 0, 1, 0, 1, 0, 1, 1, 1, 1],
         ]
         self.map()
+        self.draw_skeleton()
+        self.draw_boss()
+        self.label()
 #        self.check_if_wall_is_coming()
     def draw(self, canvas):
         self.main_character = PhotoImage(file = 'hero-down.png')
@@ -45,6 +49,22 @@ class Box(object):
                 self.testBoxY = y
                 self.character = canvas.create_image(72*self.testBoxX, 72*self.testBoxY, anchor=NW, image = picture)
 
+    def draw_skeleton(self):
+        skeleton_coords = [[6, 1], [4, 10], [9, 8]]
+        self.skeleton = PhotoImage(file = 'skeleton.png')
+        for i in range(3):
+            canvas.create_image(skeleton_coords[i][0]*72, skeleton_coords[i][1]*72, anchor = NW, image = self.skeleton)
+
+
+    def draw_boss(self):
+        self.boss_coords = [9, 0]
+        self.boss = PhotoImage(file = 'boss.png')
+        canvas.create_image(self.boss_coords[0]*72, self.boss_coords[1]*72, anchor = NW, image = self.boss)
+
+    def label(self):
+        self.w = Label(root, text="Hello Tkinter!")
+        self.w.pack()
+        self.w.place(anchor = E, width = 500, height = 200)
 
     #def check_if_wall_is_coming(self):
     #    coords = canvas.coords(character)
@@ -54,6 +74,8 @@ class Box(object):
 
 # Create the tk environment as usual
 root = Tk()
+
+
 canvas = Canvas(root, width=720, height=792)
 
 # Creating a box that can draw itself in a certain position
