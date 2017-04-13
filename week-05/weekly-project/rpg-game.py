@@ -50,21 +50,33 @@ class Box(object):
                 self.character = canvas.create_image(72*self.testBoxX, 72*self.testBoxY, anchor=NW, image = picture)
 
     def draw_skeleton(self):
-        skeleton_coords = [[6, 1], [4, 10], [9, 8]]
+        self.counter = 0
         self.skeleton = PhotoImage(file = 'skeleton.png')
-        for i in range(3):
-            canvas.create_image(skeleton_coords[i][0]*72, skeleton_coords[i][1]*72, anchor = NW, image = self.skeleton)
+        self.skeleton_draw = ['', '', '']
+        while self.counter != 3:
+            self.skeleton_coords = [random.randint(1,8), random.randint(1,9)]
+            if self.background[self.skeleton_coords[1]][self.skeleton_coords[0]] == 1:
+                self.skeleton_draw[self.counter-1] = canvas.create_image(self.skeleton_coords[0]*72, self.skeleton_coords[1]*72, anchor = NW, image = self.skeleton)
+                self.counter += 1
+
+    #for i in range(3):
+    #        self.skeleton_draw = canvas.create_image(skeleton_coords[i][0]*72, skeleton_coords[i][1]*72, anchor = NW, image = self.skeleton)
 
 
     def draw_boss(self):
         self.boss_coords = [9, 0]
         self.boss = PhotoImage(file = 'boss.png')
-        canvas.create_image(self.boss_coords[0]*72, self.boss_coords[1]*72, anchor = NW, image = self.boss)
+        self.bossi = canvas.create_image(self.boss_coords[0]*72, self.boss_coords[1]*72, anchor = NW, image = self.boss)
 
     def label(self):
-        self.w = Label(root, text="Hello Tkinter!", bg = 'grey')
-        self.w.pack(side = BOTTOM)
-        self.w.place(x = 720, y = 0, width = 280, height = 792)
+        text = ('Hero (Level 1) HP: 8/10 | DP: 8 | SP: 6')
+        self.w = Label(root, text=text, bg = 'white')
+        self.w.pack()
+        self.w.place(x = 720, y = 0, width = 300, height = 792)
+
+    def fight(self):
+        if self.testBoxX == 9 and self.testBoxY == 0:
+            canvas.delete(self.bossi)
 
     #def check_if_wall_is_coming(self):
     #    coords = canvas.coords(character)
@@ -86,22 +98,19 @@ class MainLoop():
     def on_key_press(self, e):
         # When the keycode is 111 (up arrow) we move the position of our box higher
         if e.keycode == 38:
-            if box.testBoxY > 0:
                 box.move(box.testBoxX, box.testBoxY-1, box.up)
         #        box.testBoxY = box.testBoxY - 72
         elif e.keycode == 40:
-            if box.testBoxY < 792:
                 box.move(box.testBoxX, box.testBoxY+1, box.main_character)
         #        box.testBoxY = box.testBoxY + 72
         elif e.keycode == 39:
-            if box.testBoxX <= 720:
                 box.move(box.testBoxX+1, box.testBoxY, box.right)
         #        box.testBoxX = box.testBoxX + 72
         elif e.keycode == 37:
-            if box.testBoxX > 0:
                 box.move(box.testBoxX-1, box.testBoxY, box.left)
         #        box.testBoxX = box.testBoxX - 72
-
+        elif e.keycode == 32:
+            box.fight()
         # and lower if the key that was pressed the down arrow
         # draw the box again in the new position
 mainloop = MainLoop()
