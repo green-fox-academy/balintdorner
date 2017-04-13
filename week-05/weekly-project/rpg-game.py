@@ -52,11 +52,14 @@ class Box(object):
     def draw_skeleton(self):
         self.counter = 0
         self.skeleton = PhotoImage(file = 'skeleton.png')
-        self.skeleton_draw = ['', '', '']
-        while self.counter != 3:
+        self.skeleton_coords_list = []
+    #    self.skeleton_draw = ['', '', '']
+        while self.counter != random.randint(3, 6):
             self.skeleton_coords = [random.randint(1,8), random.randint(1,9)]
             if self.background[self.skeleton_coords[1]][self.skeleton_coords[0]] == 1:
-                self.skeleton_draw[self.counter-1] = canvas.create_image(self.skeleton_coords[0]*72, self.skeleton_coords[1]*72, anchor = NW, image = self.skeleton)
+                self.draw_skeleton = canvas.create_image(self.skeleton_coords[0]*72, self.skeleton_coords[1]*72, anchor = NW, image = self.skeleton)
+                self.skeleton_coords_list.append(self.skeleton_coords)
+                print(self.skeleton_coords_list)
                 self.counter += 1
 
     #for i in range(3):
