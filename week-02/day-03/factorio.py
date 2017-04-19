@@ -8,4 +8,4 @@ def factorio(n):
         n = n - 1
     print(num)
 
-factorio(5)
+print(factorio(5))

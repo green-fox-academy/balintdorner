@@ -50,20 +50,15 @@ class Box(object):
                 self.character = canvas.create_image(72*self.testBoxX, 72*self.testBoxY, anchor=NW, image = picture)
 
     def draw_skeleton(self):
+        self.skeleton_image = PhotoImage(file = 'skeleton.png')
         self.counter = 0
-        self.skeleton = PhotoImage(file = 'skeleton.png')
-        self.skeleton_coords_list = []
-    #    self.skeleton_draw = ['', '', '']
-        while self.counter != random.randint(3, 6):
-            self.skeleton_coords = [random.randint(1,8), random.randint(1,9)]
+        while self.counter != random.randint(5,15):
+            self.skeleton_coords = [random.randint(0,9), random.randint(0,10)]
             if self.background[self.skeleton_coords[1]][self.skeleton_coords[0]] == 1:
-                self.draw_skeleton = canvas.create_image(self.skeleton_coords[0]*72, self.skeleton_coords[1]*72, anchor = NW, image = self.skeleton)
-                self.skeleton_coords_list.append(self.skeleton_coords)
-                print(self.skeleton_coords_list)
+                self.skeleton = canvas.create_image( self.skeleton_coords[0]*72, self.skeleton_coords[1]*72,
+                anchor = NW, image = self.skeleton_image)
                 self.counter += 1
 
-    #for i in range(3):
-    #        self.skeleton_draw = canvas.create_image(skeleton_coords[i][0]*72, skeleton_coords[i][1]*72, anchor = NW, image = self.skeleton)
 
 
     def draw_boss(self):
@@ -81,11 +76,9 @@ class Box(object):
         if self.testBoxX == 9 and self.testBoxY == 0:
             canvas.delete(self.bossi)
 
-    #def check_if_wall_is_coming(self):
-    #    coords = canvas.coords(character)
-    #    print(coords)
-
-
+    def fight_with_skeleton(self):
+        if self.testBoxX == self.skeleton_coords_list[0][0] and self.testBoxY == self.skeleton_coords_list[0][1]:
+            canvas.delete(self.draw_skeleton)
 
 # Create the tk environment as usual
 root = Tk()
@@ -114,6 +107,7 @@ class MainLoop():
         #        box.testBoxX = box.testBoxX - 72
         elif e.keycode == 32:
             box.fight()
+            box.fight_with_skeleton()
         # and lower if the key that was pressed the down arrow
         # draw the box again in the new position
 mainloop = MainLoop()
