@@ -1,0 +1,17 @@
+.container{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    background-color: #FFD62A;
+    align-items: center;
+    padding: 0px;
+}
+
+.item{
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+    background: #B02AFF;
+    list-style: none;
+
+}
