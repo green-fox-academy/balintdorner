@@ -1,9 +1,37 @@
-.main {
+body {
     background: #DCD6CD;
+    display: flex;
+    justify-content: center;
+}
+
+.data {
+    display: flex;
+    width: 280px;
+    height: 40px;
+    background: #938C97;
+    color: white;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 1.3em;
 }
 
 .toppoo {
     display: flex;
+}
 
+.container {
+    margin-left: 50px;
+}
 
+.brands {
+    display: flex;
+}
+
+.brandlist1, .brandlist2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.birthatrbs {
+    display: flex
 }
