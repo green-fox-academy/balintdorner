@@ -1,52 +1,31 @@
-body{
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-}
-
-.boxes {
-   display: flex;
-   flex-direction: row;
-}
-
 header {
-   width: 490px;
-   height: 100px;
-   background-color: #00ffff ;
+    //margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    background: 'yellow';
 }
 
-footer {
-   width: 490px;
-   height: 100px;
-   background-color: #0000fe ;
+/*footer {
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    background: 'blue'
 }
 
-.orange{
-   background-color: orange;
-   width: 100px;
-   height: 500px;
+.contain {
+    display: flex;
+    justify-content: center;
+    height: 500px;
 }
 
-.red{
-   background-color: red;
-   position: relative;
-   width: 250px;
-   height: 500px;
-   margin-left: 20px;
-   margin-right: 20px;
+.one {
+    background: 'orange';
 }
 
-.purple{
-   background-color: purple;
-   width: 100px;
-   height: 500px;
+.two {
+    background: 'red';
 }
 
-.black{
-   background-color: black;
-   position: absolute;
-   width: 50px;
-   height: 50px;
-   bottom: 20px;
-   right: 20px;
+.three {
+    background: 'purple';
 }
