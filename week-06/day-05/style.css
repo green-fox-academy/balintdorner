@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container_top {
@@ -78,7 +79,7 @@ a {
 }
 
 .schools {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -156,6 +157,7 @@ a {
 }
 
 .header {
+    padding-left: 50px;
     font-size: 30px;
     font-weight: bold;
     text-decoration: underline;
@@ -177,6 +179,20 @@ a {
     text-shadow: 0px 1px #A1A4AB;
 }
 
+.touch {
+    padding-left: 50px;
+}
+
+input, textarea {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+textarea {
+    margin-bottom: 50px;
+}
+
 .details {
-    color: #cccccc;
+    color: #45484d;
+    text-align: justify;
 }
