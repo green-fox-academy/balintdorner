@@ -12,12 +12,12 @@ console.log(out);
 
 
 
-var b = 9;
+var b = 11;
 var out2 = '';
 // if b is between 10 and 20 set out2 to "Sweet!"
 // if less than 10 set out2 to "More!",
 // if more than 20 set out2 to "Less!"
-if ( 10 < b < 20 ) {
+if ( 10 < b || b < 20 ) {
     out2 = 'Sweet!'
 } else if ( b < 10 ) {
     out2 = 'More!'
