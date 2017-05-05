@@ -7,7 +7,7 @@ function checkPosition() {
     var source = image.getAttribute('src')
     for (var i = 0; i < imageList.length; i++) {
         if (source === imageList[i].src) {
-            var position = i
+            var position = i;
         }
     }
     return position
@@ -25,9 +25,9 @@ function photoRight() {
 function photoLeft() {
     var currentPosition = checkPosition()
     if (currentPosition == 0) {
-        image.src = imageList[imageList.length-1].src
+        image.src = imageList[imageList.length-1].src;
     } else {
-    image.src = imageList[currentPosition-1].src
+    image.src = imageList[currentPosition-1].src;
 }}
 
 function atr() {
