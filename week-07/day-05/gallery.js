@@ -3,10 +3,6 @@ var imageList = document.querySelectorAll('.small')
 var left = document.querySelector('.left')
 var rigth = document.querySelector('.right')
 
-console.log(image)
-console.log(imageList)
-console.log(left)
-
 function checkPosition() {
     var source = image.getAttribute('src')
     for (var i = 0; i < imageList.length; i++) {
@@ -23,8 +19,7 @@ function photoRight() {
         image.src = imageList[0].src
     } else {
     image.src = imageList[currentPosition+1].src
-}
-}
+}}
 
 function photoLeft() {
     var currentPosition = checkPosition()
@@ -32,10 +27,22 @@ function photoLeft() {
         image.src = imageList[imageList.length-1].src
     } else {
     image.src = imageList[currentPosition-1].src
-}
+}}
+
+function atr() {
+    document.onclick = function(e) {
+        if (e.target.className === 'small') {
+            var imageSource = e.target.getAttribute('src')
+            image.src = imageSource
+        }
+    }
 }
 
 
-checkPosition()
+
 left.addEventListener('click', photoLeft)
 rigth.addEventListener('click', photoRight)
+
+for (var i = 0; i < imageList.length; i++) {
+    imageList[i].addEventListener('click', atr)
+}
