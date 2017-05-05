@@ -8,26 +8,31 @@ console.log(imageList)
 console.log(left)
 
 function checkPosition() {
-    var position = image.getAttribute('src')
+    var source = image.getAttribute('src')
     for (var i = 0; i < imageList.length; i++) {
-        if (position === imageList[i].src) {
-            console.log(i)
-            var posi = i
+        if (source === imageList[i].src) {
+            var position = i
         }
     }
-    return posi
+    return position
 }
 
 function photoRight() {
-    var currentPos = checkPosition()
-    var nextPos = currentPos+1
-    image.src = imageList[nextPos].src
+    var currentPosition = checkPosition()
+    if (currentPosition == imageList.length-1) {
+        image.src = imageList[0].src
+    } else {
+    image.src = imageList[currentPosition+1].src
+}
 }
 
 function photoLeft() {
-    var currentPos = checkPosition()
-    var nextPos = currentPos-1
-    image.src = imageList[nextPos].src
+    var currentPosition = checkPosition()
+    if (currentPosition == 0) {
+        image.src = imageList[imageList.length-1].src
+    } else {
+    image.src = imageList[currentPosition-1].src
+}
 }
 
 
