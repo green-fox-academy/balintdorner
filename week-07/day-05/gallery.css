@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+    justify-content: center;
+}
+
+.viewer {
+    display: flex;
+    justify-content: center;
+    max-height: 450px;
+    margin: 50px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+}
+
+.bigpicture {
+    max-width: 80%;
+    height: auto;
+    overflow: hidden;
+}
+
+button {
+    width: 50px;
+    opacity: 0;
+    font-size: 20px;
+}
+
+.left {
+
+}
+
+button:hover {
+    opacity: 0.5;
+    transition: 0.8s;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 800px;
+}
