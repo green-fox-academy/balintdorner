@@ -1,4 +1,4 @@
-/*Create a Sharpie constructor
+/*Create a Sharpie constructor
 
 We should know about each sharpie their color (which should be a string), width (which will be a floating point number), inkAmount (another floating point number)
 When creating one, we need to specify the color and the width
