@@ -13,7 +13,7 @@
     left: 0;
     background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     opacity: 0.6;
 }
@@ -24,7 +24,27 @@ a {
     margin-right: 20px;
     border-right: 2px solid white;
     border-left: 2px solid white;
-    padding: 5px;
+    padding: 10px;
+}
+
+.fb {
+    background: url(images/fb.png) center no-repeat;
+    background-size: 80%;
+    text-indent: -100000px;
+    display: inline-block;
+    width: 50px;
+}
+
+.fb:hover {
+    opacity: 1;
+}
+
+.insta {
+    background: url(images/insta.png) center no-repeat;
+    background-size: 80%;
+    text-indent: -100000px;
+    display: inline-block;
+    width: 50px;
 }
 
 .background {
