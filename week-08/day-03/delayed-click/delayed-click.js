@@ -9,5 +9,6 @@ var writer = setTimeout(function() {
     console.log(p.innerText)
 }, 2000)
 
-
+writer()
 button.addEventListener('click', writer)
+
