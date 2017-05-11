@@ -5,6 +5,7 @@ let input = document.querySelector('input')
 let search = document.querySelector('button')
 let frame = document.querySelector('iframe')
 let getDiv = document.querySelector('section');
+let p = document.querySelector('p');
 let list;
 let city = 'New+York'
 
@@ -21,14 +22,9 @@ search.addEventListener('click', function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             list = JSON.parse(xhr.response)
             console.log(list)
-            var latitude = document.createElement('p');
-            var longitude = document.createElement('p');
             var latitudeText = list.Results[0].lat;
             var longitudeText = list.Results[0].lon;
-            latitude.innerText = latitudeText;
-            longitude.innerText = longitudeText;
-            getDiv.appendChild(latitude);
-            getDiv.appendChild(longitude);
+            p.innerText = 'Latitude: ' + latitudeText + '      Longitude: ' + longitudeText
         }
     }
 
