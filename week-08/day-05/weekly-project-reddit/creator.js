@@ -1,32 +1,60 @@
 'use script'
 
-let xhr = new XMLHttpRequest();
+let xhrsend = new XMLHttpRequest();
 let url = 'https://time-radish.glitch.me/posts'
+
+
+
+
+
+xhrsend.open('POST', url, true);
+
+xhrsend.setRequestHeader("Accept", "application/json")
+xhrsend.setRequestHeader("Content-Type", "application/json")
+
+if (document.location.href === 'file:///C:/Greenfox/balintdorner/week-08/day-05/weekly-project-reddit/createpost.html') {
+    sendbutton = document.querySelector('button');
+    sendbutton.addEventListener('click', function() {
+        var url = document.querySelector('.urlinput');
+        var urlInnerText = url.value;
+        var title = document.querySelector('textarea');
+        titleInnerText = title.value;
+        xhrsend.send(JSON.stringify({
+          "title": titleInnerText,
+          "href": urlInnerText
+        }));
+        var timed =function() {
+            document.location.href = 'file:///C:/Greenfox/balintdorner/week-08/day-05/weekly-project-reddit/index.html'
+        }
+        setTimeout(timed, 700)
+    })
+}
+
+let xhr = new XMLHttpRequest();
 
 xhr.open('GET', url, true);
 
-xhr.setRequestHeader("Accept", "application/json")
+xhr.setRequestHeader("Accept", "application/json");
 
 xhr.send();
+
 
 let list;
 
 xhr.onreadystatechange = function() {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
+    if (xhr.readyState === XMLHttpRequest.DONE && document.location.href === 'file:///C:/Greenfox/balintdorner/week-08/day-05/weekly-project-reddit/index.html') {
         list = JSON.parse(xhr.response)
         console.log(list)
         for (let k = 0; k <list.posts.length; k++) {
-            postCreator(list.posts[k].title, list.posts[k].score, list.posts[k].owner)
+            postCreator(list.posts[k].title, list.posts[k].score, list.posts[k].owner, list.posts[k].href)
         }
 
     }
 }
 
-
-
 var whichpost = 1;
 
-function postCreator(posttextInner, howmanylikes, created = 'unknown') {
+function postCreator(posttextInner, howmanylikes, created = 'unknown', href) {
 
     var container = document.querySelector('.postcontainer');
     var post = document.createElement('div');
@@ -69,6 +97,7 @@ function postCreator(posttextInner, howmanylikes, created = 'unknown') {
 
     postText.className = 'posttext';
     postText.innerText = posttextInner;
+    postText.href = href;
     since.className = 'since';
     since.innerText = 'submitted somewhen ago ' + created;
 
