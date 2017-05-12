@@ -10,7 +10,7 @@ xhr.onreadystatechange = function() {
         list = JSON.parse(xhr.response)
         console.log(list)
         creatGif()
-    }
+    }
 }
 
 let getDiv = document.querySelector('div');
