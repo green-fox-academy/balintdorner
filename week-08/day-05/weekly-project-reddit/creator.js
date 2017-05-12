@@ -30,6 +30,13 @@ if (document.location.href === 'file:///C:/Greenfox/balintdorner/week-08/day-05/
     })
 }
 
+
+let xhrdelete = new XMLHttpRequest();
+xhrdelete.open('DELETE', url, true);
+
+xhrdelete.setRequestHeader("Accept", "application/json")
+
+
 let xhr = new XMLHttpRequest();
 
 xhr.open('GET', url, true);
@@ -53,6 +60,7 @@ xhr.onreadystatechange = function() {
 }
 
 var whichpost = 1;
+var when = 0;
 
 function postCreator(posttextInner, howmanylikes, created = 'unknown', href) {
 
@@ -99,7 +107,7 @@ function postCreator(posttextInner, howmanylikes, created = 'unknown', href) {
     postText.innerText = posttextInner;
     postText.href = href;
     since.className = 'since';
-    since.innerText = 'submitted somewhen ago ' + created;
+    since.innerText = 'submitted ' + when + ' ago ' + created;
 
     postInfo.appendChild(postText);
     postInfo.appendChild(since);
@@ -144,4 +152,6 @@ function postCreator(posttextInner, howmanylikes, created = 'unknown', href) {
             downvote.style.backgroundImage = 'url(downvoted.png)';
         }
     });
-}
+
+
+};
