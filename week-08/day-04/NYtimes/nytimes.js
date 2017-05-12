@@ -33,7 +33,7 @@ function writeText() {
         paragraph.innerText = paragraphText;
         pubDate.innerText = pubDateText;
         permaLink.setAttribute('href', permaLinkSource)
-        permaLink.innerText = permaLinkText
+        permaLink.innerText = permaLinkText)
         getDiv.appendChild(headline);
         getDiv.appendChild(paragraph);
         getDiv.appendChild(pubDate);
