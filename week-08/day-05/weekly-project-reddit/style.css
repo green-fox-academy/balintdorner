@@ -37,13 +37,63 @@ a {
 
 .number {
     margin: 10px;
+    margin-left: 20px;
+    display: flex;
     text-align: center;
+    align-items: center;
     font-size: 1.5em;
     color: #C9CBCF;
 }
 
-button {
+.voterbutton {
     background-color: white;
     border: 0 solid white;
     color: #C9CBCF;
+}
+
+.upvote {
+    background: url(upvote.png) center no-repeat;
+    background-size: 80%;
+    text-indent: -100000px;
+    width: 15px;
+}
+
+.downvote {
+    background: url(downvote.png) center no-repeat;
+    background-size: 80%;
+    text-indent: -100000px;
+    width: 15px;
+}
+
+.counter {
+    text-align: center;
+    align-items: center;
+    color: #696969;
+}
+
+.voter {
+    margin: 10px;
+}
+
+.postinfo {
+    margin-top: 10px;
+}
+
+.posttext {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #4D55FF;
+}
+
+.since {
+    color: #9494A1;
+    font-size: 0.7em;
+}
+
+.editor {
+    background-color: white;
+    border: 0 solid white;
+    color: #696969;
+    margin-right: 10px;
+    font-size: 0.7em;
 }
