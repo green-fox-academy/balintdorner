@@ -4,6 +4,40 @@
     box-sizing: border-box;
 }
 
-article {
+.newplayer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.add {
+    margin: 20px;
+}
+
+.sections {
     display: flex;
 }
+
+.sections div {
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 4px;
+}
+
+.player1 {
+    display: flex;
+    border: 1px solid grey;
+    width: 59%;
+    margin-left: 10px;
+}
+
+.player1 div {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding: 4px;
