@@ -28,17 +28,17 @@ function playerAdder() {
 
     var nameBox = document.createElement('div');
     var numberBox = document.createElement('div');
-    var closeShotMadeBox = document.querySelector('div');
-    var closeShotMissedBox = document.querySelector('div');
-    var middleRangeShotMadeBox = document.querySelector('div');
-    var middleRangeShotMissedBox = document.querySelector('div');
-    var threepointShotMadeBox = document.querySelector('div');
-    var threepointShotMissedBox = document.querySelector('div');
-    var assistBox = document.querySelector('div');
-    var reboundBox = document.querySelector('div');
-    var stealBox = document.querySelector('div');
-    var blockBox = document.querySelector('div');
-    var turnoverBox = document.querySelector('div');
+    var closeShotMadeBox = document.createElement('div');
+    var closeShotMissedBox = document.createElement('div');
+    var middleRangeShotMadeBox = document.createElement('div');
+    var middleRangeShotMissedBox = document.createElement('div');
+    var threepointShotMadeBox = document.createElement('div');
+    var threepointShotMissedBox = document.createElement('div');
+    var assistBox = document.createElement('div');
+    var reboundBox = document.createElement('div');
+    var stealBox = document.createElement('div');
+    var blockBox = document.createElement('div');
+    var turnoverBox = document.createElement('div');
 
     var closeShotMade = 0;
     var closeShotMissed = 0;
@@ -52,7 +52,22 @@ function playerAdder() {
     var block = 0;
     var turnover = 0;
 
-    
+    nameBox.innerText = input.value;
+    nameBox.className = 'player';
+    nameBox.id = input.value;
+    closeShotMadeBox.innerText = closeShotMade;
+    closeShotMissedBox.innerText = closeShotMissed;
+    middleRangeShotMadeBox.innerText = middleRangeShotMade;
+    middleRangeShotMissedBox.innerText = middleRangeShotMissed;
+    threepointShotMadeBox.innerText = threepointShotMade;
+    threepointShotMissedBox.innerText = threepointShotMissed;
+    assistBox.innerText = assist;
+    reboundBox.innerText = rebound;
+    stealBox.innerText = steal;
+    blockBox.innerText = block;
+    turnoverBox.innerText = turnover;
+
+
 
     player.appendChild(nameBox);
     player.appendChild(numberBox);
@@ -112,7 +127,7 @@ function playerAdder() {
         }
         if (playerId === nameBox.id) {
             middleRangeShotMissed++
-            middleRangeShotMissed.innerText = middleRangeShotMissed;
+            middleRangeShotMissedBox.innerText = middleRangeShotMissed;
         }
     }
 
