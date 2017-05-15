@@ -1,0 +1,15 @@
+{
+  "name": "day-01",
+  "version": "1.0.0",
+  "main": "npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "tape": "^4.6.3"
+  }
+}

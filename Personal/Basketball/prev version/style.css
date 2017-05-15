@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.newplayer {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.add {
+    margin: 20px;
+}
+
+input {}
+
+.sections {
+    display: flex;
+}
+
+.sections div {
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 4px;
+}
+
+article {
+    display: flex;
+    border: 1px solid grey;
+    width: 59%;
+    height: 100px;
+    margin-left: 10px;
+}
+
+article  div {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border: 1px solid grey;
+    background: linear-gradient(to right, #eeeeee 0%,#cccccc 100%);
+    font-size: 30px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.actions button {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+}

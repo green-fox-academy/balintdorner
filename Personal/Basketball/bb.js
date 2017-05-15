@@ -1,8 +1,21 @@
 var whichPlayer = 1;
-var addPlayer; document.querySelector('.addplayer')
+var addPlayer = document.querySelector('.addplayer');
+var playerId;
 
-var closeShotMadeButton = document.querySelector('.closeshotmade')
-var closeShotMadeButton = document.querySelector('.closeshotmade')
+
+var closeShotMadeButton = document.querySelector('.closeshotmade');
+var closeShotMissedButton = document.querySelector('.closeshotmissed');
+var middleRangeShotMadeButton = document.querySelector('.middlerangeshotmade');
+var middleRangeShotMissedButton = document.querySelector('.middlerangeshotmissed');
+var threepointShotMadeButton = document.querySelector('.threepointshotmade');
+var threepointShotMissedButton = document.querySelector('.threepointshotmissed');
+var assistButton = document.querySelector('.assist');
+var reboundButton = document.querySelector('.rebound');
+var stealButton = document.querySelector('.steal');
+var blockButton = document.querySelector('.block');
+var turnoverButton = document.querySelector('.turnover');
+
+
 
 function playerAdder() {
     var input = document.querySelector('input')
@@ -39,20 +52,7 @@ function playerAdder() {
     var block = 0;
     var turnover = 0;
 
-    nameBox.innerText = input.value;
-    nameBox.className = 'player';
-    nameBox.id = input.value;
-    closeShotMadeBox.innerText = closeShotMade;
-    closeShotMissedBox.innerText = closeShotMissed;
-    middleRangeShotMadeBox.innerText = middleRangeShotMade;
-    middleRangeShotMissedBox.innerText = middleRangeShotMissed;
-    threepointShotMadeBox.innerText = threepointShotMade;
-    threepointShotMissedBox.innerText = threepointShotMissed;
-    assistBox.innerText = assist;
-    reboundBox.innerText = rebound;
-    stealBox.innerText = steal;
-    blockBox.innerText = block;
-    turnoverBox.innerText = turnover;
+    
 
     player.appendChild(nameBox);
     player.appendChild(numberBox);
@@ -66,6 +66,7 @@ function playerAdder() {
     player.appendChild(reboundBox);
     player.appendChild(stealBox);
     player.appendChild(blockBox);
+    player.appendChild(turnoverBox);
 
     function CloseShotMader() {
         document.onclick = function(e) {
@@ -151,6 +152,18 @@ function playerAdder() {
         }
     }
 
+    function Rebounder() {
+        document.onclick = function(e) {
+            if (e.target.className === 'player') {
+                playerId = e.target.id
+            }
+        }
+        if (playerId === nameBox.id) {
+            rebound++
+            reboundBox.innerText = rebound;
+        }
+    }
+
     function Blocker() {
         document.onclick = function(e) {
             if (e.target.className === 'player') {
@@ -189,13 +202,15 @@ function playerAdder() {
 
     closeShotMadeButton.addEventListener('click', CloseShotMader)
     closeShotMissedButton.addEventListener('click', CloseShotMisser)
-    middleRangeShotMadeButton.addEventListener('click', MiddlerRangeShotMader)
-    middleRangeShotMissedButton.addEventListener('click', MiddlerRangeShotMisser)
+    middleRangeShotMadeButton.addEventListener('click', MiddleRangeShotMader)
+    middleRangeShotMissedButton.addEventListener('click', MiddleRangeShotMisser)
     threepointShotMadeButton.addEventListener('click', ThreePointShotMader)
     threepointShotMissedButton.addEventListener('click', ThreePointShotMisser)
-    assistButton.addEventListener('click', ThreePointShotMisser)
+    assistButton.addEventListener('click', Assister)
+    reboundButton.addEventListener('click', Rebounder)
+    stealButton.addEventListener('click', Stealer)
+    blockButton.addEventListener('click', Blocker)
+    turnoverButton.addEventListener('click', Turnoverer)
 }
 
-var playerId;
-
-addPlayer.addEventListener('click', playerAdder)
+addPlayer.addEventListener('click', playerAdder);
