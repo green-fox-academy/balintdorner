@@ -4,14 +4,11 @@
         <meta charset="utf-8">
         <title>Basketball Statistics</title>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
     <body>
-        <section class="newplayer">
-            <button class="add addplayer">Add New Player</button>
-            <input type="text">
-            <button class="add addend">Done</button>
-        </section>
-        </section class="statistics">
+
+        <section class="statistics">
             <section class="sections">
                 <div>Név</div>
                 <div>Mezszám</div>
@@ -23,7 +20,6 @@
                 <div>Kihagyott hárompontos</div>
                 <div>Gólpassz</div>
                 <div>Lepattanók</div>
-
                 <div>Labdaszerzés</div>
                 <div>Blokk</div>
                 <div>Eladott labda</div>
@@ -32,18 +28,20 @@
 
             </section>
         </section>
+
         <section class="actions">
-            <button class="closeshotmade">Közeli dobás</button>
-            <button class="closeshotmissed">Kihagyott közeli dobas</button>
-            <button class="middlerangeshotmade"> Középtávoli</button>
-            <button class="middlerangeshotmissed">Kihagyott középtávoli</button>
-            <button class="threepointshotmade"> Hárompontos</button>
-            <button class="threepointshotmissed"> Kihagyott hárompont</button>
-            <button class="assist">Gólpassz</button>
-            <button class="rebound">Lepattanó</button>
-            <button class="steal">Labdaszerzés</button>
-            <button class="block">Blokk</button>
-            <button class="turnover">Eladott labda</button>
+            <section class="newplayer">
+                <button class="add addplayer">Add New Player</button>
+                <section class="inputs">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Number">
+                </section>
+                <button class="add addend">Done</button>
+            </section>
+            <section><button class="closeshotmade">Közeli dobás</button><button class="closeshotmissed">Kihagyott közeli dobás</button><button class="middlerangeshotmade">Középtávoli</button></section>
+            <section><button class="middlerangeshotmissed">Kihagyott középtávoli</button><button class="threepointshotmade">Hárompontos</button><button class="threepointshotmissed">Kihagyott hárompontos</button></section>
+            <section><button class="assist">Gólpassz</button><button class="rebound">Lepattanó</button><button class="steal">Labdaszerzés</button></section>
+            <section><button class="block">Blokk</button><button class="turnover">Eladott labda</button></section>
         </section>
         <script src="bb.js"></script>
     </body>
