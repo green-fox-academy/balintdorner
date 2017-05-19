@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.menu {
+    width: 100%;
+    height: 30px;
+    top: 0;
+    left: 0;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #6991B6;
+}
+
+a {
+    text-decoration: none;
+    color: #2C2C34;
+    font-size: .8em;
+}
+
+.login {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.main {
+    margin-left: 10px;
+}
+
+.post {
+    display: flex;
+}
+
+.number {
+    margin: 10px;
+    margin-left: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #C9CBCF;
+}
+
+.voterbutton {
+    background-color: white;
+    border: 0 solid white;
+    color: #C9CBCF;
+}
+
+.upvote {
+    background: url(upvote.png) center no-repeat;
+    background-size: 80%;
+    text-indent: -100000px;
+    width: 15px;
+}
+
+.downvote {
+    background: url(downvote.png) center no-repeat;
+    background-size: 80%;
+    text-indent: -100000px;
+    width: 15px;
+}
+
+.counter {
+    text-align: center;
+    align-items: center;
+    color: #696969;
+}
+
+.voter {
+    margin: 10px;
+}
+
+.postinfo {
+    margin-top: 10px;
+}
+
+.posttext {
+    text-decorsation: none;
+    font-size: 1.3em;
+    color: #4D55FF;
+}
+
+.since {
+    color: #9494A1;
+    font-size: 0.7em;
+}
+
+.editor {
+    background-color: white;
+    border: 0 solid white;
+    color: #696969;
+    margin-right: 10px;
+    font-size: 0.7em;
+}

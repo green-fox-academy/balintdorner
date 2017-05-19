@@ -1,14 +1,14 @@
 'use script'
 
 let xhrsend = new XMLHttpRequest();
-let url = 'https://time-radish.glitch.me/posts'
+let url = 'http://localhost:3000/posts'
 
 xhrsend.open('POST', url, true);
 
 xhrsend.setRequestHeader("Accept", "application/json")
 xhrsend.setRequestHeader("Content-Type", "application/json")
 
-if (document.location.href === 'file:///C:/Greenfox/balintdorner/week-08/day-05/weekly-project-reddit/createpost.html') {
+if (document.location.href === 'file:///C:/Greenfox/balintdorner/week-09/day-05/reddit/createpost.html') {
     sendbutton = document.querySelector('button');
     sendbutton.addEventListener('click', function() {
         var url = document.querySelector('.urlinput');
@@ -19,10 +19,8 @@ if (document.location.href === 'file:///C:/Greenfox/balintdorner/week-08/day-05/
           "title": titleInnerText,
           "href": urlInnerText
         }));
-        var timed =function() {
-            document.location.href = 'file:///C:/Greenfox/balintdorner/week-08/day-05/weekly-project-reddit/index.html'
-        }
-        setTimeout(timed, 700)
+        if (xhr.readyState === XMLHttpRequest.DONE) { document.location.href = 'file:///C:/Greenfox/balintdorner/week-09/day-05/reddit/index.html'
+        }   
     })
 }
 
@@ -40,7 +38,7 @@ var getIndex = function() {
     let list;
 
     xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && document.location.href === 'file:///C:/Greenfox/balintdorner/week-08/day-05/weekly-project-reddit/index.html') {
+        if (xhr.readyState === XMLHttpRequest.DONE && document.location.href === 'file:///C:/Greenfox/balintdorner/week-09/day-05/reddit/index.html') {
             list = JSON.parse(xhr.response)
             console.log(list)
             for (let k = 0; k <list.posts.length; k++) {
