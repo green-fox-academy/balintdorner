@@ -18,7 +18,8 @@ var turnoverButton = document.querySelector('.turnover');
 
 
 function playerAdder() {
-    var input = document.querySelector('input')
+    var input = document.querySelector('input');
+    var jersey = document.querySelector('.jersey')
     var playersBox = document.querySelector('.playersbox');
 
     var player = document.createElement('article');
@@ -54,7 +55,10 @@ function playerAdder() {
 
     nameBox.innerText = input.value;
     nameBox.className = 'player';
+    
     nameBox.id = input.value;
+
+    numberBox.innerText = jersey.value;
     closeShotMadeBox.innerText = closeShotMade;
     closeShotMissedBox.innerText = closeShotMissed;
     middleRangeShotMadeBox.innerText = middleRangeShotMade;
@@ -92,6 +96,8 @@ function playerAdder() {
         if (playerId === nameBox.id) {
             closeShotMade++
             closeShotMadeBox.innerText = closeShotMade;
+            turnover += 2;
+            turnoverBox.innerText = turnover;
         }
     }
 
@@ -116,6 +122,8 @@ function playerAdder() {
         if (playerId === nameBox.id) {
             middleRangeShotMade++
             middleRangeShotMadeBox.innerText = middleRangeShotMade;
+            turnover += 2;
+            turnoverBox.innerText = turnover;
         }
     }
 
@@ -140,6 +148,8 @@ function playerAdder() {
         if (playerId === nameBox.id) {
             threepointShotMade++
             threepointShotMadeBox.innerText = threepointShotMade;
+            turnover += 3;
+            turnoverBox.innerText = turnover;
         }
     }
 

@@ -19,8 +19,9 @@ if (document.location.href === 'file:///C:/Greenfox/balintdorner/week-09/day-05/
           "title": titleInnerText,
           "href": urlInnerText
         }));
-        if (xhr.readyState === XMLHttpRequest.DONE) { document.location.href = 'file:///C:/Greenfox/balintdorner/week-09/day-05/reddit/index.html'
-        }   
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            document.location.href = 'index.html'
+        }
     })
 }
 
@@ -59,6 +60,7 @@ function postCreator(posttextInner, howmanylikes, created = 'unknown', id,  href
     var container = document.querySelector('.postcontainer');
     var post = document.createElement('div');
     var id = id;
+    var howmanylikes = howmanylikes;
     post.className = 'post';
     container.appendChild(post);
 
@@ -138,7 +140,7 @@ function postCreator(posttextInner, howmanylikes, created = 'unknown', id,  href
 
     remove.addEventListener('click', function(callback){
         var xhr =  new XMLHttpRequest();
-        xhr.open('DELETE', 'https://time-radish.glitch.me/posts/' + id, true);
+        xhr.open('DELETE', 'file:///C:/Greenfox/balintdorner/week-09/day-05/reddit/index.html' + id, true);
         xhr.setRequestHeader('Accept', 'application/json');
         xhr.send();
 
