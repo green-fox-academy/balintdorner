@@ -14,59 +14,28 @@ TennisGame1.prototype.wonPoint = function(playerName) {
 };
 
 TennisGame1.prototype.getScore = function() {
-    var currentStanding = "";
-    var tempScore = 0;
-    if (this.playerOneScore === this.playerTwoScore) {
-        switch (this.playerOneScore) {
-            case 0:
-                currentStanding = "Love-All";
-                break;
-            case 1:
-                currentStanding = "Fifteen-All";
-                break;
-            case 2:
-                currentStanding = "Thirty-All";
-                break;
-            default:
-                currentStanding = "Deuce";
-                break;
-        }
+    this.scoreNames = ["Love", "Fifteen", "Thirty", "Forty"];
+    this.result = '';
+    if (this.playerOneScore < 4 && this.playerTwoScore < 4 && this.playerOneScore !== this.playerTwoScore) {
+        this.result = this.scoreNames[this.playerOneScore] + '-' + this.scoreNames[this.playerTwoScore];
+    } else if (this.playerOneScore + this.playerTwoScore >= 6 && this.playerOneScore ===
+        this.playerTwoScore) {
+        this.result = 'Deuce';
     } else if (this.playerOneScore >= 4 || this.playerTwoScore >= 4) {
-        var getAdvantagePlayer = this.playerOneScore - this.playerTwoScore;
-        if (getAdvantagePlayer === 1) {
-            currentStanding = "Advantage player1";
-        } else if (getAdvantagePlayer === -1) {
-            currentStanding = "Advantage player2";
-        } else if (getAdvantagePlayer >= 2) {
-            currentStanding = "Win for player1";
+        this.AdvantagePlayer = this.playerOneScore - this.playerTwoScore;
+        if (this.AdvantagePlayer === 1) {
+            this.result = "Advantage player1";
+        } else if (this.AdvantagePlayer === -1) {
+            this.result = "Advantage player2";
+        } else if (this.AdvantagePlayer >= 2) {
+            this.result = "Win for player1";
         } else {
-            currentStanding = "Win for player2";
+            this.result = "Win for player2";
         }
     } else {
-        for (var i = 1; i < 3; i++) {
-            if (i === 1) {
-                tempScore = this.playerOneScore;
-            } else {
-                currentStanding += "-";
-                tempScore = this.playerTwoScore;
-            }
-            switch (tempScore) {
-                case 0:
-                    currentStanding += "Love";
-                    break;
-                case 1:
-                    currentStanding += "Fifteen";
-                    break;
-                case 2:
-                    currentStanding += "Thirty";
-                    break;
-                case 3:
-                    currentStanding += "Forty";
-                    break;
-            }
-        }
-    }
-    return currentStanding;
+    this.result = this.scoreNames[this.playerOneScore] + "-All";
+    };
+    return this.result
 };
 
 if (typeof window === "undefined") {
