@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.musicplayer {
+    background: linear-gradient(to top, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
+    width: 50%;
+    height: 50%;
+}
