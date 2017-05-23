@@ -16,3 +16,15 @@ class Animals {
 
 var cat = new Animals('miauiuu');
 cat.say();
+
+
+function Animals2(says) {
+    this.says = says;
+};
+
+Animals2.prototype.say = function() {
+    console.log(this.says);
+};
+
+var cattie = new Animals2('woff');
+cattie.say()
