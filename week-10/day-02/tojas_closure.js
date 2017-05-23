@@ -43,6 +43,7 @@ var counter1 = getCounter();
 counter1();
 
 
+//az elozo kicsit megvaditva. a parameter is ugyanyug masolodik, szep novekvo szamsorunk lesz.
 function createCounterN(start) {
     return function () {
         start++;

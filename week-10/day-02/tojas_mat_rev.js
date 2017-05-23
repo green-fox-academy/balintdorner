@@ -36,3 +36,5 @@ anonymus();
 (function () {
     console.log('Egy masik nev nelkuli fgv.');
 })();
+
+//revealing pattern, amikor egy fgv vmit megoszt a kulvilaggal es vmit nem.

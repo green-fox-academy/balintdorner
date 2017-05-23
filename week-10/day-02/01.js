@@ -18,6 +18,8 @@ var cat = new Animals('miauiuu');
 cat.say();
 
 
+
+//with prototype
 function Animals2(says) {
     this.says = says;
 };
