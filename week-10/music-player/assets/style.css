@@ -13,15 +13,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
 }
 
 .musicplayer {
     position: absolute;
-    width: 50%;
-    height: 70%;
-    border: 2px solid black;
-    padding: 10px;
+    width: 40%;
+    height: 60%;
+    background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+    border: 3px solid #eeeeee;
 }
 
 .UI {
@@ -36,25 +35,22 @@ body {
     height: 40%;
     width: 100%;
     display: flex;
-    overflow: hidden;
 }
 
-img {
+.logo {
     width: 100%;
-    height: 50%;
+}
+
+
+.placeholder {
+    width: 100%;
 }
 
 .addplaylist {
     display: flex;
     justify-content: space-between;
-    background-color: #bdbdbd;
-    height: 50px;
-    padding: 10px;
-}
-
-.images > div {
-    width: 100px;
-    height: 200px;
+    width: 100%;
+    margin-top: 20%;
 }
 
 .playlist {

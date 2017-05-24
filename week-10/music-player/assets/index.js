@@ -37,3 +37,5 @@ function playlistRender(title) {
     playlistName.innerText = title;
     playlistDeleter.innerText = 'X';
 }
+
+functi
