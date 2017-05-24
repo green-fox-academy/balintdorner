@@ -59,6 +59,7 @@ img {
 
 .playlist {
     overflow-y:scroll;
+    height: 40%;
 }
 
 .playlist > div {
