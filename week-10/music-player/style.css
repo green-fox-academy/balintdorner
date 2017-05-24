@@ -12,10 +12,50 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
 }
 
 .musicplayer {
-    background: linear-gradient(to top, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
+    background: linear-gradient(to center, #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
     width: 50%;
-    height: 50%;
+    height: 70%;
+    border: 2px solid #babcbc;
+    box-shadow: 2px 2px #999999;
+    border-radius: 1px;
+}
+
+.information {
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+
+
+.logo {
+    width: 33%;
+    height: 100%;
+    background: url(img/foxplayer.png) center no-repeat;
+    background-size: 100%;
+}
+
+.playedinfo {
+    width: 67%;
+    height: 100%;
+}
+
+.lists {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist, .tracklist {
+    width: 100%;
+    height: 100%;
+    margin: 30px;
+}
+
+audio {
+    width: 100%;
 }
