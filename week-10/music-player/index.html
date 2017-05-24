@@ -3,37 +3,83 @@
     <head>
         <meta charset="utf-8">
         <title>Foxplayer</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
     <body>
         <section class="musicplayer">
-            <section class="information">
-                <div class="logo"></div>
-                <div class="playedinfo">
-                    <img src="img/trackimg.jpg">
-                </div>
-            </section>
-            <section class="lists">
-                <div class="playlist">
-                    <ul>
-                        <li>sdfdsfdffdsfdfsdger</li>
-                        <li>sdfdsfdffdsfdfsdger</li>
-                        <li>sdfdsfdffdsfdfsdger</li>
-                        <li>sdfdsfdffdsfdfsdger</li>
-                    </ul>
-                </div>
-                <div class="tracklist">
-                    <ul>
-                        <li>sdfdsfdffdsfdfsdger</li>
-                        <li>sdfdsfdffdsfdfsdger</li>
-                        <li>sdfdsfdffdsfdfsdger</li>
-                        <li>sdfdsfdffdsfdfsdger</li>
-                    </ul>
-                </div>
+            <section class="UI">
+                <section class="left">
+                    <div class="images">
+                        <div>
+                            <img src="assets/foxplayer.png" alt="Foxi">
+                            <div class="addplaylist">
+                                <div>Playlists</div>
+                                <button>+</button>
+                            </div>
+                        </div>
+                        <div class="placeholder">
+                        <img src="assets/music.png" alt="Music" class="placeholder">
+                        </div>
+                    </div>
+                    <div class="playlist">
+                        <div>All tracks</div>
+                        <div>Favourites</div>
+                        <div>
+                            <span>Relaxing playlist</span>
+                            <button>X</button>
+                        </div>
+                        <div>
+                            <span>Party</span>
+                            <button>X</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="right">
+                    <div class="currentlyPlayed">
+                        <div >
+                            <div>Drink The Sea: The Remixes vol. 2
+                            </div>
+                            <div>The Glitch Mob</div>
+                        </div>
+                        <div>
+                            <button>+</button>
+                            <button>Star</button>
+                        </div>
+                    </div>
+                    <div class="tracklist">
+                        <div class="track">
+                            <span>1</span>
+                            <span>Song</span>
+                            <span>3:30</span>
+                        </div>
+                        <div class="track">
+                            <span>2</span>
+                            <span>Song</span>
+                            <span>3:30</span>
+                        </div>
+                        <div class="track">
+                            <span>3</span>
+                            <span>Song</span>
+                            <span>3:30</span>
+                        </div>
+                        <div class="track">
+                            <span>4</span>
+                            <span>Song</span>
+                            <span>3:30</span>
+                        </div>
+                        <div class="track">
+                            <span>5</span>
+                            <span>Song</span>
+                            <span>3:30</span>
+                        </div>
+                    </div>
+                </section>
             </section>
             <audio controls>
                 <source src="Organoid_-_09_-_Purple_Drift.mp3" type="audio/mpeg">
             </audio>
         </section>
+        <script src="server.js"></script>
     </body>
 </html>

@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+}
+
+.musicplayer {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.UI {
+    display: flex;
+}
+
+.left {
+    width: 50%;
+}
+
+.images {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 50%;
+}
+
+.addplaylist {
+    display: flex;
+    justify-content: space-between;
+    background-color: #bdbdbd;
+    height: 50px;
+    padding: 10px;
+}
+
+.images > div {
+    width: 100px;
+    height: 200px;
+}
+
+.playlist {
+    overflow-y:scroll;
+}
+
+.playlist > div {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px;
+}
+
+.playlist div:nth-child(even) {
+    background-color: #bdbdbd;
+}
+
+.currentlyPlayed {
+    display: flex;
+    height: 30%;
+}
+
+.currentlyPlayed > div {
+    margin: 20px;
+}
+
+.tracklist div:nth-child(even) {
+    background-color: #bdbdbd;
+}
+
+.tracklist {
+    overflow-y: scroll;
+}
+
+.track {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+audio {
+    width: 100%;
+    height: 50px;
+}
