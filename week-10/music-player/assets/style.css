@@ -123,16 +123,16 @@ body {
 }
 
 .forward {
-    background: url(assets/foxplayer.png) center no-repeat;
+    background: url(forward.svg) center no-repeat;
 
 }
 
 .rewind {
-    background: url(assets/rewind.svg) center no-repeat;
+    background: url(rewind.svg) center no-repeat;
 }
 
 .shuffle {
-    background: url(assets/shuffle.svg) center no-repeat;
+    background: url(shuffle.svg) center no-repeat;
 }
 
 audio {

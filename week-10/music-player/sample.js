@@ -23,7 +23,7 @@ const Controller = function() {
   }
 
   this.button.addEventListener('click', function(){
-    console.log(this);
+    console.log(this); 
     this.ajax.get(this.render.bind(this));
   }.bind(this));
 }

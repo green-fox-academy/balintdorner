@@ -1,41 +1,54 @@
 'use strict';
+console.log('cica')
+class Ajax {
+    constructor() {
+        this.xhr = new XMLHttpRequest();
+        this.url = 'http://localhost:3000/';
+        console.log('alma');
+    };
 
-let xhr = new XMLHttpRequest();
-let url = 'http://localhost:3000/playlists';
+    request(method, endpoint, callback) {
+        this.method = method;
+        this.endpoint = endpoint;
+        this.xhr.open(this.method, this.url+this.endpoint, true);
+        this.xhr.setRequestHeader("Accept", "application/json");
+        this.xhr.send();
 
-var getIndex = function() {
-    xhr.open('GET', url, true);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.send();
+        this.xhr.onreadystatechange = function() {
+            this.response;
+            if (this.xhr.readyState === XMLHttpRequest.DONE) {
+                this.response = JSON.parse(this.xhr.response)
+                callback(this.response);
+    };
+};
 
-    xhr.onreadystatechange = function() {
-        let list;
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            list = JSON.parse(xhr.response)
-            console.log(list)
-            for (let k = 0; k <list.length; k++) {
-                playlistRender(list[k].title)
-            }
+class Render {
+    playlistRender(title) {
 
-        }
-    }
-}
+        var playlistsContainer = document.querySelector('.playlist');
+        var playlistElement = document.createElement('div');
+        var playlistName = document.createElement('span');
+        var playlistDeleter = document.createElement('button');
 
-getIndex();
+        playlistsContainer.appendChild(playlistElement);
+        playlistElement.appendChild(playlistName);
+        playlistElement.appendChild(playlistDeleter);
 
-function playlistRender(title) {
+        playlistName.innerText = title;
+        playlistDeleter.innerText = 'X';
+    };
+};
+
+class Controller {
+    constructor() {
+        this.ajax = new Ajax();
+        this.render = new Render();
+    };
 
-    var playlistsContainer = document.querySelector('.playlist');
-    var playlistElement = document.createElement('div');
-    var playlistName = document.createElement('span');
-    var playlistDeleter = document.createElement('button');
+    drawing() {
+        this.ajax.request('GET', 'playlists', this.render.playlistRender);
+    };
+};
 
-    playlistsContainer.appendChild(playlistElement);
-    playlistElement.appendChild(playlistName);
-    playlistElement.appendChild(playlistDeleter);
-
-    playlistName.innerText = title;
-    playlistDeleter.innerText = 'X';
-}
-
-functi
+var controller = new Controller();
+controller.drawing();
