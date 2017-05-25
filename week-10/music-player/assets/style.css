@@ -96,6 +96,7 @@ body {
 
 .tracklist {
     overflow-y: scroll;
+    height: 270px;
 }
 
 .track {
