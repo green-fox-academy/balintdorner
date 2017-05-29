@@ -5,18 +5,6 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
-const playlist = [
-    { "id": 1, "title": "Favorites", "system": 1},
-    { "id": 2, "title": "Music for programming", "system": 0},
-    { "id": 3, "title": "Driving", "system": 0},
-    { "id": 5, "title": "Fox house", "system": 0},
-];
-
-const tracklist = [
-	{ "id": 21, "title": "Halahula", "artist": "Untitled artist", "duration": 545, "path": "c:/music/halahula.mp3" },
-	{ "id": 412, "title": "No sleep till Brooklyn", "artist": "Beastie Boys", "duration": 312.12, "path": "c:/music/beastie boys/No sleep till Brooklyn.mp3"}
-];
-
 const conn = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -37,31 +25,36 @@ app.get('/playlists', function(req, res) {
     conn.query("SELECT * FROM playlists",function(err,rows){
         if(err) {
             console.log("PARA", err.message);
+            return;
         }
         res.send(rows);
+        return;
     });
+    return;
 });
 
 app.get('/playlist-tracks', function(req, res) {
-    var id = req.query.id;
-    var item;
+    var playlist = req.query.playlist;
+    var item = [];
     conn.query("SELECT * FROM tracklist",function(err,rows){
         if(err) {
             console.log("PARA", err.message);
         } else {
-            if (id === undefined) {
+            if (playlist === undefined) {
                 res.send(rows);
+                return;
             } else {
                 rows.forEach(row => {
-                    if( id == row.ID) {
-                        item = row;
-
+                    if( playlist == row.playlist) {
+                        item.push(row);
                     }
                 });
-            } res.send(item);
+            }
+            res.send(item);
+            return;
         }
-
     });
+    return;
 });
 
 app.listen(3000, function() {

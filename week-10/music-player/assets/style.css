@@ -77,9 +77,15 @@ body {
     padding: 10px;
 }
 
+
 .playlist div:nth-child(even) {
     background-color: #bdbdbd;
 }
+
+.playlist > div:hover {
+    background-color: #89c6de;
+}
+
 
 .currentlyPlayed {
     display: flex;
@@ -92,6 +98,10 @@ body {
 
 .tracklist div:nth-child(even) {
     background-color: #bdbdbd;
+}
+
+.tracklist div:hover {
+    background-color: #89c6de;
 }
 
 .tracklist {
