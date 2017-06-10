@@ -48,7 +48,7 @@ input {
     box-shadow: 2px 2px 2px grey;
 }
 
-.adder div:hover {
+.adder div:active {
     position: relative;
     top: -2px;
     left: -2px;
