@@ -22,6 +22,22 @@ const flushChecker = function(type) {
     return isFlush
 }
 
+const pokerChecker = function(number) {
+    let isPoker = true;
+    let card;
+    let obj = {};
+    
+    number.forEach(function (card) {
+        if (card in obj) {
+            obj[card]++;
+        } else {
+            obj[card] = 1;
+        }
+    });
+    console.log(obj)
+}
+
+
 const logic = function(hand1) {
     let number = [];
     let type = [];
@@ -66,5 +82,7 @@ logic(["5H", "3H", "4H", "2H", "6H"])
     Poker
     Straight flush
 */
+
+pokerChecker([2,2,2,4,5])
 
 module.exports = logic;
