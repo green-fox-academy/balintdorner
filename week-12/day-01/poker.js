@@ -1,20 +1,5 @@
 'use strict';
 
-const slicer = function(hand1) {
-    let number = [];
-    let type = [];
-     hand1.forEach(function(e) {
-        number.push(e.slice(0, 1));
-        type.push(e.slice(1));    
-    })
-
-    number = number.sort();
-    number.forEach(function(e, i) {
-        number[i] = parseInt(e)
-    })
-    return number, type
-}
-
 const straightChecker = function(number) {
     let isStraight = true;
 
@@ -37,7 +22,39 @@ const flushChecker = function(type) {
     return isFlush
 }
 
-handChecker(["5H", "2H", "4H", "2H", "6H"])
+const logic = function(hand1) {
+    let number = [];
+    let type = [];
+    let handType = '';
+     hand1.forEach(function(e) {
+        number.push(e.slice(0, 1));
+        type.push(e.slice(1));    
+    })
+
+    number = number.sort();
+    number.forEach(function(e, i) {
+        number[i] = parseInt(e)
+    })
+    console.log(straightChecker(number))
+
+    if(straightChecker(number) && flushChecker(type)) {
+        handType = 'straightflush'
+    }
+
+    if(straightChecker(number) && !flushChecker(type)) {
+        handType = 'straight'
+    }
+
+    if(!straightChecker(number) && flushChecker(type)) {
+        handType = 'flush'
+    }
+    console.log(handType)
+    return handType
+}
+
+logic(["5H", "3H", "4H", "2H", "6H"])
+
+
 
 /*  Magas lap
     Par
@@ -50,4 +67,4 @@ handChecker(["5H", "2H", "4H", "2H", "6H"])
     Straight flush
 */
 
-module.exports = handChecker;
+module.exports = logic;
