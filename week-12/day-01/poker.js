@@ -2,9 +2,8 @@
 
 const handChecker = function(hand1) {
     let number = [];
-    let intNumber = []
     let type = [];
-    let isStraight = true;
+    let isStraightFlush = true;
     hand1.forEach(function(e) {
         number.push(e.slice(0, 1));
         type.push(e.slice(1));    
@@ -16,17 +15,18 @@ const handChecker = function(hand1) {
     })
 
     for(let i = 0; i < number.length-1; i++) {
-        console.log(number[i]+1)
-        console.log(number[i+1])
         if (number[i+1] !== number[i]+1) {  
-            isStraight = false;
+            isStraightFlush = false;
         }
     }
 
-    console.log(number);
-    console.log(type);
-    console.log(isStraight);
-    return isStraight
+    for(let i = 0; i < type.length-1; i++) {
+        if (type[i+1] !== type[i]) {  
+            isStraightFlush = false;
+        }
+    }
+
+    return isStraightFlush
 }
 
 handChecker(["5H", "2H", "4H", "2H", "6H"])
