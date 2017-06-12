@@ -26,6 +26,11 @@ const pokerChecker = function(number) {
     let isPoker = true;
     let card;
     let obj = {};
+    let poker = false;
+    let drill = false;
+    let pair = false;
+    let handType = '';
+
     
     number.forEach(function (card) {
         if (card in obj) {
@@ -34,8 +39,32 @@ const pokerChecker = function(number) {
             obj[card] = 1;
         }
     });
-    console.log(obj)
+
+    for(var key in obj) {
+    var value = obj[key];
+    if( value === 4) {
+        poker = true;
+    } else if(value === 3) {
+        drill = true;
+    } else if( value === 2) {
+        pair = true;
+    }
+    if(poker === true) {
+        handType = 'poker';
+    } else if( drill === true && pair === true) {
+        handType = 'full';
+    } else if( drill === true && pair === false) {
+        handType = 'drill';
+    } else if( drill === false && pair === true && Object.keys(obj).length === 3) {
+        handType = 'two pairs';
+    } else if( drill === false && pair === true && Object.keys(obj).length === 4) {
+        handType = 'pair';
+    }
 }
+console.log(handType)
+}
+
+pokerChecker([5,4,2,2,2])
 
 
 const logic = function(hand1) {
@@ -51,7 +80,6 @@ const logic = function(hand1) {
     number.forEach(function(e, i) {
         number[i] = parseInt(e)
     })
-    console.log(straightChecker(number))
 
     if(straightChecker(number) && flushChecker(type)) {
         handType = 'straightflush'
@@ -64,7 +92,6 @@ const logic = function(hand1) {
     if(!straightChecker(number) && flushChecker(type)) {
         handType = 'flush'
     }
-    console.log(handType)
     return handType
 }
 
@@ -82,7 +109,5 @@ logic(["5H", "3H", "4H", "2H", "6H"])
     Poker
     Straight flush
 */
-
-pokerChecker([2,2,2,4,5])
 
 module.exports = logic;
