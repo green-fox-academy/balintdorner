@@ -9,15 +9,15 @@ import { User } from './shared/models/users';
 
 export class AppComponent {
   message: string = 'Hello';
-  users: User[] = [
-    { id: 26, name: 'Babafej', username: 'Szerelem'},
-    { id: 27, name: 'Babifej2', username: 'Cukibaba'},
-    { id: 28, name: 'Babafej3', username: 'Cicamica'}
-  ];
-  activeUser: User;
+  // // users: User[] = [
+  //   { id: 26, name: 'Jani', username: 'pisti'},
+  //   { id: 27, name: 'Bela', username: 'rambo'},
+  //   { id: 28, name: 'Kata', username: 'mooouni'}
+  // ];
+  //activeUser: User;
 
-  selectUser(user) {
-    this.activeUser = user;
+//   selectUser(user) {
+//     this.activeUser = user;
     
-  }
-}
+//   }
+ }

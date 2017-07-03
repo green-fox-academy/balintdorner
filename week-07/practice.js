@@ -1,11 +1,18 @@
 'use strict';
 
-console.log('Hello World!');
-console.log('Hello Petra!');
-console.log('Hello Bajusz!');
-console.log('Hello Fanni!');
+let star = '*';
+let space = ' ';
 
-console.log('Humpty Dumpty had a great fall.');
-console.log('Humpty Dumpty sat on a wall,');
-console.log('All the king\'s horses and all the king\'s men');
-console.log('Couldn\'t put Humpty together again.');
+// for (let i = 0; i < 5; i++) {
+//     console.log(star.repeat(i))
+// }
+
+function printer(lines) {
+    for (let i = 0; i < lines; i++) {
+        if (i % 2 === 1) {
+            console.log(space.repeat((lines-i) / 2) + star.repeat(i))
+        }
+    }
+}
+
+printer(9)
