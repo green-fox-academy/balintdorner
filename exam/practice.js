@@ -28,7 +28,7 @@ let example = function(x) {
 // i.e.: filter, map
 
 //built in methods splice, forEach, map, filter
-var names = ['Bela', 'Atesz', 'Gabi', 'Jani', 'Peti', 'Gyuri']
+let names = ['Bela', 'Atesz', 'Gabi', 'Jani', 'Peti', 'Gyuri']
 
 //array.splice(honnan, mennyit, insertItem1, insertItem2, ...)
 names.splice(2,4, 'Tibi')
@@ -38,3 +38,43 @@ names.splice(2,4, 'Tibi')
 names.forEach(function(element) {
     console.log(element);
 });
+
+//let new_array = arr.map(function callback(currentValue, index, array)
+//egy uj arraybe teszi a function eredmenyet
+let numbers = [1, 5, 10, 15];
+let doubles = numbers.map(function(x) {
+   return x * 2;
+});
+
+//let newArray = arr.filter(callback[, thisArg])
+//egy uj arraybe teszi a functionbol fiterezett teteleket. itt a 6 betunel hosszabbakat
+let words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+let longWords = words.filter(function(word){
+  return word.length > 6;
+})
+
+
+// //unit testing
+// //main file
+// const counter = function(number) {
+//     let result = number * 2;
+//     return result
+// }
+
+// module.exports = counter;
+
+// //test file
+// //npm install tape
+// var test = require('tape');
+// var count = require('main file eleresi utvonala')
+
+// test('counter', function (t) {
+//     let test1 = 3
+//     t.equal(validator(test1), 6, 'egesz szamra jo');
+
+//     var test2 = 0
+//     t.equal(validator(test2), 0, 'nullaval jo');
+// t.end();
+// });
+
+
