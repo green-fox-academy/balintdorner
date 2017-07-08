@@ -7,12 +7,36 @@ let space = ' ';
 //     console.log(star.repeat(i))
 // }
 
-function printer(lines) {
-    for (let i = 0; i < lines; i++) {
-        if (i % 2 === 1) {
-            console.log(space.repeat((lines-i) / 2) + star.repeat(i))
-        }
-    }
-}
+// let ak = 123;
 
-printer(9)
+// function doubling(number) {
+//     return number * 2;
+// }
+// console.log(doubling(ak))
+
+// let a1 = 'Greenfox';
+
+// function greet(who = 'anonymus') {
+//     console.log('Greeting, dear ' + who);
+// }
+// greet()
+
+// let am = 'kuty';
+
+// function appendA(string) {
+//     console.log(string + 'a')
+// }
+// appendA(am)
+
+// function sum(num) {
+//     let total = 0;
+//     for (num; num > 0; num--) {
+//         total += num
+//     }
+//     return total
+// }
+// console.log(sum(5))
+
+function factorio() {
+    
+}
