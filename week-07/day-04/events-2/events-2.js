@@ -1,9 +1,9 @@
-var button = document.querySelector('button');
-var li = document.querySelectorAll('li');
-var p = document.querySelector('p');
+const button = document.querySelector('button');
+const list = document.querySelectorAll('li');
+const paragraph = document.querySelector('p');
 
 function itemCounter() {
-    p.textContent = li.length
-}
+    paragraph.textContent = list.length;
+};
 
-button.addEventListener('click', itemCounter)
+button.addEventListener('click', itemCounter);

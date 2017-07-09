@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 class Ajax {
     constructor() {
@@ -6,24 +6,21 @@ class Ajax {
         this.url = 'http://localhost:3000/';
     };
 
-    alma() {
-        console.log('alama')
-    }
-
     request(method, endpoint, callback) {
-        this.method = method;
-        this.endpoint = endpoint;
-        this.xhr.open(this.method, this.url + this.endpoint, true);
+        this.xhr.open(method, this.url + endpoint, true);
         this.xhr.setRequestHeader("Accept", "application/json");
         this.xhr.send();
 
         this.xhr.onreadystatechange = function() {
             this.response;
-            if (this.xhr.readyState === XMLHttpRequest.DONE) {
+            if (this.xhr.readyState === 4) {
                 if (this.xhr.status === 200) {
-                    this.response = JSON.parse(this.xhr.response)
-                    callback(this.response.length, this.response);
-                };
+                    this.response = JSON.parse(this.xhr.response);
+                    callback(this.response);
+                } else {
+                    new Error('WTF!');
+					console.log(xhr.status);
+                }
             };
         }.bind(this);
     };
