@@ -158,6 +158,4 @@ let longWords = words.filter(function(word){
 // Kecske=geza&aroka=4     = paramaaterek
 // #uborka                               = ez nem megy el a szerverhez, csak azt mutatja meg hogy hova ugorjon az                         
 //                                                   oldalon belul a link. Hash vagy ancor.
-
-
-
+//3 pattern: Factory pattern, Decorator pattern, Constructor pattern
