@@ -78,6 +78,23 @@ let longWords = words.filter(function(word){
 // });
 
 
-//DATABASE
+//DATABASE-adatbazis
+// CREATE DATABASE  nev: adatbazis letrehoza
+// Show databases: megmutatja milyen tablaink vannk
+// Use nev: melyik tablat hasznalom
+// SELECT database: megmutatja melyiket hasznalom
+// DROP DATABE IF EXIST nev: torles
+// Filterezes: SELECT csaladi nev pl
+// 		FROM tablanev
+// 		WHERE varos = 'BP'
+// 		//WHERE varos like 'D%' az osszes varos ami Dvel kezdodik
+// 		//WHERE varos like '___D' negybetus varos ami Dre vegzodik
+// A budapestieket fogja listazni
+// A WHEREhez mehet minden logikai cuccc mint az IF fgbbe
+// ES &&    OR||
+// IS NULL: azt ellenorizzuk h ures e
 
+// sorbarendezes: SELECT csaladi nev pl
+// 		FROM tablanev
+// ORDER BY varos
 
