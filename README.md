@@ -20,4 +20,6 @@
 
 [database](https://github.com/greenfox-academy/balintdorner/blob/master/week-09/day-05/reddit/server.js "database")
 
+[database2](https://github.com/greenfox-academy/balintdorner/blob/master/week-09/day-04/index.js "database2")
+
 
