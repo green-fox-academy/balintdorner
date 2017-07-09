@@ -14,4 +14,6 @@
 
 [ajax request-exam](https://github.com/greenfox-academy/balintdorner/blob/master/exam/example/ajax.js "ajax request-exam")
 
+[server-endpoint](https://github.com/greenfox-academy/balintdorner/blob/master/exam/example/server.js "server-endpoint")
+
 

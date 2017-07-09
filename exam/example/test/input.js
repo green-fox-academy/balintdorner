@@ -14,22 +14,22 @@ let validator = function(input) {
     for (let i = 0; i < feedbackList.length; i++) {
         if (feedbackList[i] === 'awesome') {
             awesome = true;
-        }
-    }
+        };
+    };
 
     for (let i = 0; i < feedbackList.length; i++) {
         for (let j = 0; j < goodWords.length; j++) {
             if (feedbackList[i] === goodWords[j]) {
-                counter++
-            }
+                counter++;
+            };
 
         };
     };
 
     if (res === 'fox' && awesome === true && counter >= 2 && scale >= 10) {
         valid = true;
-    }
-    return valid
-}
+    };
+    return valid;
+};
 
 module.exports = validator;
