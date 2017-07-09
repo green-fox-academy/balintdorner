@@ -97,4 +97,29 @@ let longWords = words.filter(function(word){
 // sorbarendezes: SELECT csaladi nev pl
 // 		FROM tablanev
 // ORDER BY varos
+// INSERT INTO table mit -tablaba teszunk uj adatot
+
+
+//REST CONCEPT
+// REST stands for Representational State Transfer. (It is sometimes spelled "ReST".) It relies on a stateless, 
+// client-server, cacheable communications protocol -- and in virtually all cases, the HTTP protocol is used.
+
+// REST is an architecture style for designing networked applications. The idea is that, rather than using complex 
+// mechanisms such as CORBA, RPC or SOAP to connect between machines, simple HTTP is used to make calls between machines.
+
+// In many ways, the World Wide Web itself, based on HTTP, can be viewed as a REST-based architecture.
+// RESTful applications use HTTP requests to post data (create and/or update), read data (e.g., make queries), 
+// and delete data. Thus, REST uses HTTP for all four CRUD (Create/Read/Update/Delete) operations.
+
+// Mi a REST?
+
+// A REST egy HTTP protokollra fejlesztett kommunikációs architektúra típus, mely kliens és szerver közti 
+// kommunikáció megvalósítására használható. Kihasználja a HTTP állapotkódokat és metódusokat egyaránt, sőt a specifikáció 
+// megköveteli azok használatát, bár az egyedi fejlesztésű REST interfészek tervezése során ezekre gyakran nem ügyelnek a fejlesztők. 
+// A kérések URI-k használatával történnek, melyek erőforrásokat azonosítanak, és az URI-k egységes interfészt 
+// biztosítanak a kliens számára. Minden kérésre azonos formátumban reagál a szerver, ez általában JSON,
+// de használható még HTML és XML formátum is. Fontos, hogy a kérések állapotmentesek, tehát nem beszélhetünk „munkafolyamatról”, 
+// így az authorizáció folyamatos figyelmet igényel.
+
+
 
