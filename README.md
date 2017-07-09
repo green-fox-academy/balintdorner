@@ -16,4 +16,6 @@
 
 [server-endpoint](https://github.com/greenfox-academy/balintdorner/blob/master/exam/example/server.js "server-endpoint")
 
+[test](https://github.com/greenfox-academy/balintdorner/tree/master/exam/example/test "test")
+
 
