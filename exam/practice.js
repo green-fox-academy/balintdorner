@@ -122,4 +122,42 @@ let longWords = words.filter(function(word){
 // így az authorizáció folyamatos figyelmet igényel.
 
 
+//HOW THE INTERNET WORKS
+// Internet is a system designed to move clientInformation
+// Send binary information(0,1)
+// BANDWIDTH: savszelesseg
+// Hogyan kuldjuk a biteket? Fennyel, optikai kabelen keresztul, vagy radiohullamokkal
+// Vinc Cerf es Bob Kahn invented
+// Az internet egy meno architecture kulonbozo protokollokra epitve
+// Protocol: szabalyok aminek menten a gepek komunikalnak egymassal
+// IP: a computer address
+// DNS(Domain Name System): dns szerverek taroljak, hogy melyik domainhez milyen ip tartozik. felhasznalo beuti h gugli.hu,
+// elmegy egy DNS szerverhez a keres, az ha tudja valaszol, ha nem megkerdezi a tobbi DNS-t, aztan ha megvan a valasz, akkor visszakuldi
+// az IP-t a felhasznalonak es igy jutunk el a gugli.hu-ra
+// Informacio aramlas gepek kozott: mintha egy csomagkuldovel kuldenenk csomagot. arra megy a csomagkuldo a varosban, amerre kicsi a forgalom
+// Lehet, hogy vmit tobb csomagban kell elkuldeni mert egybe nem fer be(egy film pl). Az utakon a routerek a forgalomiranyitok.
+// Honnan tudjuk, hogy minden csomag megerkezett? Ezert van TCP (Transmission control protocol): megnezti, hogy minden megvan e, ha igen pipa, ha
+// nem, keri ujra az adatokat
+// Web address = URL(Uniform resource locator) = honlap cim
+// HTTP(Hypertext Transfert Protocol): amikor be akarunk lepni egy oldalra, akkor ezen a HTTP nyelven kommunikal a gep es a server.
+// Gyakorlatilag get HTTP requestet kuldunk
+// HTML: Hypertext Markup Language
+// HTTPS: biztonsagos kommunikaco
+// Secure: Ceasar Cypher: x karakterrel eltoljuk az osszeset, helyette, minden karaktert mas szammal tolunk, es egy keyn taroljuk
+// h melyiket mennyivel. still not good enough.
+// public key: mindenki hasnzalhatja, private: csak akinek hozzaferese van. 
+//a postaladaba a publikkal lehet adatot kuldeni, de dekodolni mar csak a privatetel lehet
+//http://bdcampbell.net/javascript/book/javascript_the_good_parts.pdf OLVASNIIIIII!!!!!
+
+// URL reszei:
+// HTTPS://                             =  protocol    (protocol meg a FTP is pl)
+// www.                                  = aldomain
+// Example.org                      = domain, HOST
+// /Apple/14/Kukac              = PATH
+// ?                                           = query string
+// Kecske=geza&aroka=4     = paramaaterek
+// #uborka                               = ez nem megy el a szerverhez, csak azt mutatja meg hogy hova ugorjon az                         
+//                                                   oldalon belul a link. Hash vagy ancor.
+
+
 
