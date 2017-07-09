@@ -1,13 +1,15 @@
+'use strict';
+
 const mysql = require('mysql');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-var app = express();
+const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-var conn = mysql.createConnection({
+const conn = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "root",
@@ -15,8 +17,8 @@ var conn = mysql.createConnection({
 });
 
 app.get('/hello', function get(req, res) {
-    console.log('hello world')
-})
+    console.log('hello world');
+});
 
 app.get('/items', function get(req, res) {
     var allItems = "<ul>";
@@ -25,12 +27,12 @@ app.get('/items', function get(req, res) {
             console.log("PARA", err.message);
         } else {
             rows.forEach(row => {
-                allItems += '<li>' + row.href + '</li>'
+                allItems += '<li>' + row.href + '</li>';
             });
-        }   allItems += '</ul>'
+        }   allItems += '</ul>';
         res.send(allItems);
     });
-})
+});
 
 app.get('/posts', function get(req, res) {
 
@@ -43,7 +45,7 @@ app.get('/posts', function get(req, res) {
         }
         res.send(allItems);
     });
-})
+});
 
 app.post('/posts', function get(req, res) {
     const param = req.params.what;
@@ -53,10 +55,10 @@ app.post('/posts', function get(req, res) {
         if(err) {
             console.log("PARA", err.message);
         }
-        res.status(200).send()
+        res.status(200).send();
     });
-})
+});
 
 app.listen(3000, function() {
-    console.log('server is running')
+    console.log('server is running');
 })
