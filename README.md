@@ -7,8 +7,11 @@
         ---- EXAM links: ----
 
 [event-handling-1](https://github.com/greenfox-academy/balintdorner/tree/master/week-07/day-04/events-1 "event-handling-1")
+
 [event-handling-2](https://github.com/greenfox-academy/balintdorner/tree/master/week-07/day-04/events-2 "event-handling-2")
+
 [ajax request-wClass](https://github.com/greenfox-academy/balintdorner/blob/master/week-10/music-player/assets/index.js "ajax request-wClass")
+
 [ajax request-exam](https://github.com/greenfox-academy/balintdorner/blob/master/exam/example/ajax.js "ajax request-exam")
 
 
