@@ -8,7 +8,7 @@
 
 [event-handling-1](https://github.com/greenfox-academy/balintdorner/tree/master/week-07/day-04/events-1 "event-handling-1")
 
-[event-handling-2](https://github.com/greenfox-academy/balintdorner/tree/master/week-07/day-04/events-2 "event-handling-2")
+[event-handling-angular](https://github.com/greenfox-academy/hotel-booking-admin-frontend/tree/master/src/app/hotels/single-hotel "event-handling-angular")
 
 [ajax request-wCallback](https://github.com/greenfox-academy/balintdorner/blob/master/week-10/music-player/assets/index.js "ajax request-wCallback")
 
