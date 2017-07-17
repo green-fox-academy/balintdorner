@@ -12,5 +12,31 @@ function summer() {
     console.log(total)
 }
 
-summer()
-console.log('alma')
+// The prime factors of 13195 are 5, 7, 13 and 29.
+
+// What is the largest prime factor of the number 600851475143 ?
+
+function prime_factor(number) {
+    let primeFactor = number;
+    let primeFactor2
+    let highest;
+    let divideable = false;
+    function checker() {
+        if( number % primeFactor === 0) {
+            primeFactor2 = primeFactor-1;
+            while(primeFactor2 > 1) {
+                if(primeFactor % primeFactor2 === 0) {
+                    divideable = true
+                } 
+            }
+        }
+    }
+        if(divideable === false) {
+            return primeFactor
+        } else {
+            checker()
+        }
+    }
+}
+
+console.log(prime_factor(50))
